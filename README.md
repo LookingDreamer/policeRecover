@@ -241,6 +241,10 @@ serial:3||env:dev||isactive:1||triggervalue:{=,1}||ipaddress:{=,192.168.3.102}||
 #模糊匹配 string%: 以string开头	％string: 以string结尾	％string％: 中间包含string   
 ```
 
+### 日志
+![Alt text](./image/1516259710984.png)
+![Alt text](./image/1516259836277.png)
+
 ### 其他功能
 #### 告警收敛
 > 将收集到数据保存到redis或mongodb中,进行报警数据聚合和分析,分析出有价值的信息。后续在补充这个功能
