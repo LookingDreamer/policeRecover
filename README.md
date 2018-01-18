@@ -3,6 +3,8 @@
 
 [TOC]
 
+## 高清版doc,请撮:  [http://lookingdreamer.gitee.io/policerecover](http://lookingdreamer.gitee.io/policerecover)
+
 ## 脚本作用
 - 利用zabbix实现故障自愈
 - http监控自愈
