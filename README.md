@@ -32,7 +32,7 @@ check_result(no)->run_cmd_fail
 ```
 [root@blueking policeRecover]# tree -L 1
 .
-├── common.config       #全局配置文件
+├── common.config		#全局配置文件
 ├── policeRecover.sh    #核心执行脚本
 ├── rule.config         #规则配置文件  
 └── temp                #临时存储文件 
@@ -238,7 +238,7 @@ serial:3||env:dev||isactive:1||triggervalue:{=,1}||ipaddress:{=,192.168.3.102}||
 #3.3 规则库的支持条件
 #数值比较(支持浮点数) gt:大于 lt:小于 ge:大于等于 le:小于等于 eq:等于
 #字符串相等 ＝
-#模糊匹配 string%: 以string开头    ％string: 以string结尾  ％string％: 中间包含string   
+#模糊匹配 string%: 以string开头	％string: 以string结尾	％string％: 中间包含string   
 ```
 
 ### 其他功能
