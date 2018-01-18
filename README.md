@@ -12,21 +12,7 @@
 - ......
 
 ## 实现逻辑(Zabbix故障自愈)
-```flow
-zabbix_server=>start: zabbix服务端触发告警脚本
-self_recover=>operation: zabbix服务端告警(自愈脚本)
-analysis_alert_content=>operation: 分析告警内容以及参数
-match_rule=>condition: 判断是否满足自愈规则
-exit_action=>end: 退出操作
-rule_cmd_run=>operation: 根据规则配置执行自愈操作
-check_result=>condition: 根据规则配置校验自愈结果(是否成功)
-run_cmd_fail=>end: 退出并触发微信和邮件报警
-rule_center=>subroutine: 规则配置库
-zabbix_server->self_recover->analysis_alert_content->rule_center->match_rule
-match_rule(no)->exit_action
-match_rule(yes)->rule_cmd_run->check_result
-check_result(no)->run_cmd_fail
-```
+![输入图片说明](https://gitee.com/uploads/images/2018/0118/145550_785d866a_119746.png "QQ截图20180118145520.png")
 
 ## 脚本内容
 ```
