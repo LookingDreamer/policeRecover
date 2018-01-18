@@ -46,11 +46,11 @@ check_result(no)->run_cmd_fail
 > 对Actions进行特殊设置,Default subject / Default message ,消息内容是规则判断的主要依据。
 
 图1
-![Alt text](./1515986777355.png)
+![Alt text](./image/1515986777355.png)
 图2
-![Alt text](./1515986874756.png)
+![Alt text](./image/1515986874756.png)
 图3
-![Alt text](./1515986918190.png)
+![Alt text](./image/1515986918190.png)
 
 - Default subject
 ```
@@ -72,11 +72,11 @@ triggervalue|{TRIGGER.VALUE}#hostname|{HOSTNAME1}#ipaddress|{IPADDRESS}#hostgrou
 ```
 
 #### 2. Media types设置
-![Alt text](./1515987139203.png)
+![Alt text](./image/1515987139203.png)
 
 #### 3. Users 设置
 > Users需要关联该报警自愈的媒介
-![Alt text](./1515987538067.png)
+![Alt text](./image/1515987538067.png)
 
 #### 4. 上传脚本
 > 将policeRecover上传到Zabbix服务器的alertscripts目录,并修改为可执行权限
@@ -94,17 +94,17 @@ serial:2||env:dev||isactive:1||triggervalue:{=,1}||ipaddress:{like,192.168.3%}||
 ```
 #### 2. 自愈
 1. 模拟触发报警
-![Alt text](./1516003846825.png)
+![Alt text](./image/1516003846825.png)
 
 2. zabbix收到报警
-![Alt text](./1516003919294.png)
+![Alt text](./image/1516003919294.png)
 
 3. 触发自愈规则
-![Alt text](./1516003947260.png)
+![Alt text](./image/1516003947260.png)
 
 4. 成功或失败发送微信或邮件消息
-![Alt text](./1516004208731.png)
-![Alt text](./1516004059519.png)
+![Alt text](./image/1516004208731.png)
+![Alt text](./image/1516004059519.png)
 
 ### 应用端口不存在时,匹配规则配置后自动恢复
 #### 1. 配置端口不存在自愈规则(rule.config)
@@ -113,22 +113,22 @@ serial:1||env:dev||isactive:1||triggervalue:{=,1}||ipaddress:{=,192.168.3.85}||t
 ```
 #### 2. 自愈
 1. 模拟端口不存在
-![Alt text](./1516005064690.png)
+![Alt text](./image/1516005064690.png)
 
 2.触发报警和规则
-![Alt text](./1516006083542.png)
+![Alt text](./image/1516006083542.png)
 
 3.自愈成功
-![Alt text](./1516006154341.png)
+![Alt text](./image/1516006154341.png)
 
 4.失败的情况
 > 比如如果你的cmd配置错误
-![Alt text](./1516006234862.png)
+![Alt text](./image/1516006234862.png)
 
 ### 接口返回异常时,匹配规则配置后自动恢复
 #### 1. 配置web监控(具体细节自行谷歌)
 > 监控url,校验返回码和require
-![Alt text](./1516006483161.png)
+![Alt text](./image/1516006483161.png)
 
 #### 2. 设置接口自愈规则
 ```
@@ -136,15 +136,15 @@ serial:3||env:dev||isactive:1||triggervalue:{=,1}||ipaddress:{=,192.168.3.102}||
 ```
 #### 3. 模拟网页404
 访问前
-![Alt text](./1516006598753.png)
+![Alt text](./image/1516006598753.png)
 模拟故障后
-![Alt text](./1516006637038.png)
+![Alt text](./image/1516006637038.png)
 
 #### 4. 触发报警和规则
-![Alt text](./1516006689434.png)
+![Alt text](./image/1516006689434.png)
 
 #### 5. 自愈
-![Alt text](./1516009229515.png)
+![Alt text](./image/1516009229515.png)
 
 ### 自定义规则,执行相应的恢复操作
 > 其他自定义规则,可以根据相应的返回KEY，做相应的自愈操作。`一切你想要自愈的操作都可以做到。`
